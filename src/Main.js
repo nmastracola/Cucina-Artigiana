@@ -10,21 +10,31 @@ import './Main.css';
 import bag from "./media/shopping-bag.svg";
 import user from "./media/avatar.svg"
 
+class UserItems extends Component {
+    render() {
+        return (
+            <div className="user-items">
+                <img className="bag" src={bag} alt="shopping bag"/>
+                <img className="user" src={user} alt="user"/>
+            </div>
+        )
+    }
+}
+
 
 class Header extends Component {
     render() {
         return (
             <nav className="mainHeader">
-                <div className="linkContainer">
-                    <div className="logo"><Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>CA</Link></div>
-                    <div className="links">
-                        <p><Link to="/pasta" style={{textDecoration: 'none', color: 'inherit'}}>Pasta</Link></p>
-                        <p><Link to="/bread" style={{textDecoration: 'none', color: 'inherit'}}>Bread</Link></p>
-                        <p><Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>About</Link></p>
-                        <p><Link to="/contacts" style={{textDecoration: 'none', color: 'inherit'}}>Contact</Link></p>
-                        <img className="bag" src={bag} alt="shopping bag"/>
-                        <img className="user" src={user} alt="user"/>
-                    </div>
+                <div className="header-components">
+                <div className="logo"><Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>Cucina Artigiana</Link></div>
+                <div className="links">
+                    <Link to="/pasta" style={{textDecoration: 'none', color: 'inherit'}}>Pasta</Link>
+                    <Link to="/bread" style={{textDecoration: 'none', color: 'inherit'}}>Bread</Link>
+                    <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>About</Link>
+                    <Link to="/contacts" style={{textDecoration: 'none', color: 'inherit'}}>Contact</Link>
+                </div>
+                <UserItems />
                 </div>
             </nav>
         )

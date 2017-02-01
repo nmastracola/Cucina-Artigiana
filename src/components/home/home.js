@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+// import axios from 'axios'
+
+import Product from '../products/products'
 
 //STYLING
 import './home.css';
@@ -18,6 +21,7 @@ class Home extends Component {
         return (
             <div className="hero">
                 <HomeCTA/>
+                <Product />
             </div>
         )
     }
