@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute} from 'react-router';
-// import EnsureLoggedInContainer from '../components/containers/EnsureLoggedInContainer'
+import requireAuth from '../components/controllers/requireAuth'
 
 import Main from '../Main';
 import Home from '../components/home/home'
@@ -11,8 +11,9 @@ import Contact from '../components/contact/contact';
 import NotFound from '../components/notfound/notfound';
 import Bag from '../components/bag/bag';
 import Login from '../components/login/login';
-// import Checkout from '../components/checkout/checkout';
-// import Account from '../components/account/account'
+import Checkout from '../components/checkout/checkout';
+import Account from '../components/account/account';
+import Logout from '../components/logout/logout';
 
 
 const Routes = (props) => (
@@ -23,13 +24,12 @@ const Routes = (props) => (
             <Route path="/bread" component={Bread} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route path="*" component={NotFound} />
             <Route path="/cart" compnent={Bag} />
-            <Route path="/login" component={Login}/>
-                {/*<Route component={EnsureLoggedInContainer}>*/}
-                    {/*<Route path="/checkout" component={Checkout} />*/}
-                    {/*<Route path="/account" component={Account} />*/}
-                {/*</Route>*/}
+            <Route path="/login" component={Login} />
+            <Route path="/logout" compnent={Logout} />
+            <Route path="*" component={NotFound} />
+            <Route path="/checkout" component={Checkout} onEnter={requireAuth} />
+            <Route path="/account" component={Account} /*onEnter={requireAuth}*/ />
         </Route>
     </Router>
 );

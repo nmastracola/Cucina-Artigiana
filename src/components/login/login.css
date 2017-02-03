@@ -1,0 +1,15 @@
+.login-view {
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    align-content: center;
+}
+
+.form-container {
+    padding: 15px;
+}

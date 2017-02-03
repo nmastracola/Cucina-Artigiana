@@ -18,10 +18,15 @@
     "massive": "^2.6.0",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
     "pg": "^6.1.2",
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-form": "^1.0.1",
+    "react-motion": "^0.4.7",
     "react-router": "^3.0.2",
+    "react-tooltip": "^3.2.3",
     "redux": "^3.6.0"
   },
   "scripts": {

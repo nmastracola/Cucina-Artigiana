@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 import Footer from './components/footer';
+import ReactTooltip from 'react-tooltip'
 
 //STYLES
 import './reset.css';
@@ -15,7 +16,7 @@ class UserItems extends Component {
         return (
             <div className="user-items">
                 <img className="bag" src={bag} alt="shopping bag"/>
-                <img className="user" src={user} alt="user"/>
+                <a data-tip="React-tooltip"><img className="user" src={user} alt="user"/></a>
             </div>
         )
     }
@@ -32,7 +33,7 @@ class Header extends Component {
                     <Link to="/pasta" style={{textDecoration: 'none', color: 'inherit'}}>Pasta</Link>
                     <Link to="/bread" style={{textDecoration: 'none', color: 'inherit'}}>Bread</Link>
                     <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>About</Link>
-                    <Link to="/contacts" style={{textDecoration: 'none', color: 'inherit'}}>Contact</Link>
+                    <Link to="/contact" style={{textDecoration: 'none', color: 'inherit'}}>Contact</Link>
                 </div>
                 <UserItems />
                 </div>

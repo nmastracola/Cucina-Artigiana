@@ -10,9 +10,9 @@ class Products extends Component {
         }
     }
     componentDidMount(){
-        axios.get('/products')
+        axios.get('http://localhost:3001/products')
             .then(response => {
-                console.log(response);
+                console.log(response.data);
                 this.setState({
                     products: response.data
                 })
@@ -23,13 +23,13 @@ class Products extends Component {
         if(this.state.products){
             return this.state.products.map((product) => {
                 return (<Product key={product.id}
-                                 name={product.item}
+                                 image={product.imgurl}
+                                 item={product.item}
                                  description={product.description}
                                  cost={product.cost}
                                  productId={product.id}/>)
             });
         }
-
     }
     render() {
         return (

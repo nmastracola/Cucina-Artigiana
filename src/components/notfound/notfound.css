@@ -1,0 +1,22 @@
+.not-found {
+    height: 93.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../../media/desert.jpg") no-repeat;
+    background-size: cover;
+}
+
+.error {
+    font-size: 30px;
+    color: red;
+}
+
+.card {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid darkgrey;
+}

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios'
-
 import Product from '../products/products'
 
 //STYLING
@@ -19,9 +17,14 @@ class HomeCTA extends Component {
 class Home extends Component {
     render() {
         return (
+            <div>
             <div className="hero">
                 <HomeCTA/>
-                <Product />
+            </div>
+                <div className="announce-container">
+                <h1 className="announce">Our Products</h1>
+                </div>
+            <Product />
             </div>
         )
     }
