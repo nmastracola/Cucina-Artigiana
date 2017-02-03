@@ -1,22 +1,22 @@
 import React, {Component,} from 'react'
 import {Motion, spring} from 'react-motion'
-// import axios from 'axios'
+import axios from 'axios'
 
 class Product extends Component {
     constructor(props){
         super(props);
-        // this.addToBag = this.addToBag.bind(this);
+        this.addToBag = this.addToBag.bind(this);
         this.state = {
             rotate: 0
         }
     }
 
-    // addToBag(){
-    //     axios.post('http://localhost:3001/bag', {bagId:this.props.bagId, productId: this.props.productId,quantity:1})
-    //         .then(result => {
-    //             this.props.update(result.data[0].bagid);
-    //         })
-    // }
+    addToBag(){
+        axios.post('/bag', {userId:1, productId: this.props.productId})
+            .then(result => {
+                this.props.update(result.data[0].userId);
+        })
+    }
 
     render(){
         const {rotate} = this.state;

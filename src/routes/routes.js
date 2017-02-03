@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute} from 'react-router';
-import requireAuth from '../components/controllers/requireAuth'
+// import requireAuth from '../components/controllers/requireAuth'
 
 import Main from '../Main';
 import Home from '../components/home/home'
@@ -28,8 +28,8 @@ const Routes = (props) => (
             <Route path="/login" component={Login} />
             <Route path="/logout" compnent={Logout} />
             <Route path="*" component={NotFound} />
-            <Route path="/checkout" component={Checkout} onEnter={requireAuth} />
-            <Route path="/account" component={Account} /*onEnter={requireAuth}*/ />
+            <Route path="/checkout" component={Checkout}  />
+            <Route path="/account" component={Account} />
         </Route>
     </Router>
 );

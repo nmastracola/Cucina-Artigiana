@@ -7,15 +7,15 @@ const express = require('express'),
     passport = require('passport'),
     db = massive.connectSync({
     connectionString: config.elephant}),
-    LocalStrategy = require('passport-local').Strategy;
+    LocalStrategy = require('passport-local').Strategy,
+    uid = require('uid-safe');
 
 
 //// App instantiation ////
 
 const app = module.exports = express();
-app.use(express.static('../../public'));
-app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(bodyParser.json());
 app.set('db', db);
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -25,10 +25,13 @@ app.use(function(req, res, next) {
 app.use(session({
     secret: config.secret,
     resave: true,
-    saveUninitialized: true
-}));
+    saveUninitialized: true,
+    cookie: {maxAge: 20 * 365 * 24 * 60 * 60 * 1000},
+    genid: function(req) { return uid(18, (err, string) => {if (err) throw err})}
+    }
+));
 
-
+app.use(express.static('../../public'));
 
 //// Passport Local Auth ////
 passport.use(new LocalStrategy(
@@ -89,6 +92,7 @@ app.get('/auth/logout', (req, res) => {
 
 //// API for interacting with Database ////
 
+
 app.get('/products', (req, res) => {
     db.getProducts((err, result) => {
         if (err) {
@@ -105,4 +109,5 @@ app.get('/products', (req, res) => {
 // })
 
 app.listen(3001);
+
 
