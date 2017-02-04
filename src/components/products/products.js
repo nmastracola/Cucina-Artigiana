@@ -10,7 +10,7 @@ class Products extends Component {
         }
     }
     componentDidMount(){
-        axios.get('http://localhost:3001/products')
+        axios.get('http://localhost:3001/products/')
             .then(response => {
                 console.log(response.data);
                 this.setState({

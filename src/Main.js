@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 import Footer from './components/footer';
-import ReactTooltip from 'react-tooltip'
+// import ReactTooltip from 'react-tooltip'
 
 //STYLES
 import './reset.css';

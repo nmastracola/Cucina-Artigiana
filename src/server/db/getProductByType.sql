@@ -1,2 +1,2 @@
 select * from products
-where subtype = '$1';
+where type = $1
