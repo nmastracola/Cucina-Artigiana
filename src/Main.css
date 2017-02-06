@@ -1,8 +1,19 @@
- .mainHeader {
-     background-color: transparent;
-     width: 100vw;
-     height: 65px;
-     border-bottom: 1px solid black;
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT|Cinzel');
+
+html {
+    font-family: 'Old Standard TT', serif;
+}
+
+.hvr-underline-from-center:before {
+    background: #aaaaaa;
+}
+
+.mainHeader {
+    background-color: #d8d8d8;
+    width: 100vw;
+    height: 65px;
+    box-shadow: 0 2px 8px 0 #888888;
+    position: relative;
 }
 
  .header-components {
@@ -15,6 +26,7 @@
  .logo {
     color: #000;
     font-size: 30px;
+     font-family: 'Cinzel', serif;
     display: flex;
     padding-top: 10px;
      margin-left: 20px;
@@ -27,6 +39,7 @@
     justify-content: space-between;
     color: #000;
     font-size: 20px;
+    font-family: 'Old Standard TT', serif;
     text-decoration: none;
     margin-right: 150px;
 

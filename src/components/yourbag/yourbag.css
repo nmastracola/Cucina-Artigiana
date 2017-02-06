@@ -1,0 +1,54 @@
+.bag-page {
+    font-family: 'Old Standard TT', serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 93.1vh;
+}
+
+.bag-container {
+    font-family: 'Old Standard TT', serif;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    width: 70vw;
+    margin: 30px 0;
+}
+.bagitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    width: 500px;
+    height: 100px;
+    border-bottom: 1px solid #999999;
+}
+
+
+.text-container {
+    text-align: center;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    align-content: stretch;
+    padding-top: 2px;
+}
+.bagimage{
+    width: 75px;
+    height: auto;
+}
+
+.shopping-link {
+    text-decoration: none;
+}
+
+.checkout-link {
+    margin-top: 5px;
+    text-decoration: none;
+}

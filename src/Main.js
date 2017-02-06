@@ -5,6 +5,7 @@ import Footer from './components/footer';
 
 //STYLES
 import './reset.css';
+import './hover.css'
 import './Main.css';
 
 //MEDIA
@@ -15,7 +16,7 @@ class UserItems extends Component {
     render() {
         return (
             <div className="user-items">
-                <img className="bag" src={bag} alt="shopping bag"/>
+                <Link to="/your-bag"><img className="bag" src={bag} alt="shopping bag"/></Link>
                 <a data-tip="React-tooltip"><img className="user" src={user} alt="user"/></a>
             </div>
         )
@@ -30,10 +31,10 @@ class Header extends Component {
                 <div className="header-components">
                 <div className="logo"><Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>Cucina Artigiana</Link></div>
                 <div className="links">
-                    <Link to="/pasta" style={{textDecoration: 'none', color: 'inherit'}}>Pasta</Link>
-                    <Link to="/bread" style={{textDecoration: 'none', color: 'inherit'}}>Bread</Link>
-                    <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>About</Link>
-                    <Link to="/contact" style={{textDecoration: 'none', color: 'inherit'}}>Contact</Link>
+                    <Link to="/pasta" style={{textDecoration: 'none', color: 'inherit'}}><div className="hvr-underline-from-center">Pasta</div></Link>
+                    <Link to="/bread" style={{textDecoration: 'none', color: 'inherit'}}><div className="hvr-underline-from-center">Bread</div></Link>
+                    <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}><div className="hvr-underline-from-center">About</div></Link>
+                    <Link to="/contact" style={{textDecoration: 'none', color: 'inherit'}}><div className="hvr-underline-from-center">Contact</div></Link>
                 </div>
                 <UserItems />
                 </div>
@@ -43,12 +44,11 @@ class Header extends Component {
 }
 
 class Main extends Component {
-
     render() {
     return (
         <div>
             <Header />
-              {this.props.children}
+            {this.props.children}
             <Footer />
         </div>
     );

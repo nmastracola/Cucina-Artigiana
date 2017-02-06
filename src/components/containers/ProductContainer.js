@@ -1,6 +1,7 @@
 import React, {Component,} from 'react'
 import {Motion, spring} from 'react-motion'
 import axios from 'axios'
+import swal from 'sweetalert'
 
 class Product extends Component {
     constructor(props){
@@ -12,10 +13,11 @@ class Product extends Component {
     }
 
     addToBag(){
-        axios.post('/bag', {userId:1, productId: this.props.productId})
+        axios.post('http://localhost:3001/bag', {userId:1, productId: this.props.productId})
             .then(result => {
                 this.props.update(result.data[0].userId);
-        })
+            });
+        swal("Product added to Bag!", "Yay!", "success")
     }
 
     render(){
@@ -39,12 +41,12 @@ class Product extends Component {
                             <div className="text-container">
                                 <div className="name">{this.props.item}</div>
                                 <div className="desc">{this.props.description}</div>
-                                <div className="cost">{this.props.cost}</div>
+                                <div className="cost">${this.props.cost}</div>
                             </div>
                         </div>
                         <div className="item back">
                             <div className="button-container">
-                            <button className="bag-button" onClick={this.addToBag}>Add To Bag?</button>
+                                <button className="bag-button" onClick={this.addToBag}>Add To Bag?</button>
                             </div>
                         </div>
                     </div>

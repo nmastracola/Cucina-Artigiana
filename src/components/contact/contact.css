@@ -1,0 +1,32 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    font-family: 'Old Standard TT', serif;
+}
+
+.about-image {
+    width: 500px;
+    height: auto
+}
+
+.phone {
+    margin-bottom: 5px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+.sentence {
+    margin-bottom: 10px;
+}

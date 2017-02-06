@@ -1,3 +1,3 @@
-insert into bag(userId)
+insert INTO bag(userId)
   values($1)
-  returning id
+  returning id;

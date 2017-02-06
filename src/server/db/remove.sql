@@ -1,0 +1,1 @@
+delete from bag where productId = $1

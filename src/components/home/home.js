@@ -8,7 +8,7 @@ class HomeCTA extends Component {
     render() {
         return (
             <div className="cta">
-                <p>Artisanal Pastas and Bread</p>
+                <p>Artisanal Pasta and Bread</p>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../paymentfont/css/paymentfont.css'
 import './footer.css'
+import { Form, Text } from 'react-form'
 
 class Payments extends Component {
     render() {
@@ -31,6 +32,25 @@ class Footer extends Component {
     render() {
         return (
             <footer className="mainFooter">
+                <h1 className="announce-news"> Join our Monthly Newsletter </h1>
+                <div className="newsletter-wrapper">
+                <Form
+                    className="newsletter-form"
+                    validate={values => {
+                        return {
+                            email: !values.email ? 'Valid email required' : undefined
+                    }}}>
+                    <Text
+                        className="newsletter"
+                        field="email"
+                        placeholder="Email Address"
+                    >
+                    </Text>
+                    <div>
+                    <button type="button" className="newsletter-submit">Submit</button>
+                    </div>
+                </Form>
+                </div>
                 <Payments />
                 <span className="line"></span>
                 <Copy />

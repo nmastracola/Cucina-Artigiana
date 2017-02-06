@@ -34,8 +34,13 @@ class Pasta extends Component {
     }
     render() {
         return (
-            <div className="products-view">
-                {this.renderProducts()}
+            <div className="page-wrapper">
+                <div className="title-wrapper">
+                    <h1 className="title"> The Pasta </h1>
+                </div>
+                <div className="products-view">
+                    {this.renderProducts()}
+                </div>
             </div>
         );
     }

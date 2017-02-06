@@ -1,6 +1,7 @@
 import React, { Component,} from 'react';
 import axios from 'axios';
 import Product from '../containers/ProductContainer'
+import 'sweetalert/dist/sweetalert.css'
 
 class Products extends Component {
     constructor(props){
@@ -12,7 +13,6 @@ class Products extends Component {
     componentDidMount(){
         axios.get('http://localhost:3001/products/')
             .then(response => {
-                console.log(response.data);
                 this.setState({
                     products: response.data
                 })
