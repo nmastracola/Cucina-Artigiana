@@ -14,3 +14,4 @@ coverage
 npm-debug.log
 /src/media/
 .idea
+!/src/media/
